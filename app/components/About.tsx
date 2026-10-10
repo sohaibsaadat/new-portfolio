@@ -14,6 +14,7 @@ const About = () => {
         if (data.success && data.resume?.url) setResumeUrl(data.resume.url);
       })
       .catch((error) => console.error("Load resume link error:", error));
+console.log(process.env.NEXT_PUBLIC_BACKEND_URL);      
   }, []);
   
   return (
