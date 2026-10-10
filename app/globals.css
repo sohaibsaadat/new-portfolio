@@ -1,26 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  color-scheme: light;
+  --page-bg: #f3f5f7;
+  --foreground: #20252b;
+  --muted-foreground: #626b75;
+  --subtle-foreground: #48515b;
+  --surface: #ffffff;
+  --surface-muted: #e9edf1;
+  --surface-deep: #e1e5e9;
+  --drawer-bg: #f3f5f7;
+  --hero-stats-bg: #e9edf1;
+  --orbit-bg: #e9edf1;
+  --orbit-icon-bg: #ffffff;
+  --submit-bg: #ffffff;
+  --submit-foreground: #20252b;
+  --border: #cbd2d9;
+  --border-soft: rgba(32, 37, 43, 0.1);
+  --field-bg: #ffffff;
+  --field-focus: #f5f7f9;
+  --field-border: #d1d7de;
+  --placeholder: #77818c;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --page-bg: #1e1e1e;
+    --foreground: #f5f5f5;
+    --muted-foreground: #a3a3a3;
+    --subtle-foreground: #d1d5db;
+    --surface: #1a1a1a;
+    --surface-muted: #262626;
+    --surface-deep: #141414;
+    --drawer-bg: #000000;
+    --hero-stats-bg: #252424;
+    --orbit-bg: #1c1c1c;
+    --orbit-icon-bg: #2a2a2a;
+    --submit-bg: #fafafa;
+    --submit-foreground: #171717;
+    --border: #6b7280;
+    --border-soft: rgba(255, 255, 255, 0.08);
+    --field-bg: #171717;
+    --field-focus: #262626;
+    --field-border: #262626;
+    --placeholder: #737373;
   }
 }
 
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page-bg: #1e1e1e;
+  --foreground: #f5f5f5;
+  --muted-foreground: #a3a3a3;
+  --subtle-foreground: #d1d5db;
+  --surface: #1a1a1a;
+  --surface-muted: #262626;
+  --surface-deep: #141414;
+  --drawer-bg: #000000;
+  --hero-stats-bg: #252424;
+  --orbit-bg: #1c1c1c;
+  --orbit-icon-bg: #2a2a2a;
+  --submit-bg: #fafafa;
+  --submit-foreground: #171717;
+  --border: #6b7280;
+  --border-soft: rgba(255, 255, 255, 0.08);
+  --field-bg: #171717;
+  --field-focus: #262626;
+  --field-border: #262626;
+  --placeholder: #737373;
+}
+
 body {
-  background: var(--background);
+  background-color: var(--page-bg);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+@theme {
+  --font-sans: "Lato", sans-serif;
+
 }
